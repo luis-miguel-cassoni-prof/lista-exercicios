@@ -1,0 +1,17 @@
+<p>Produto: <input [(ngModel)]="nome" placeholder="Digite o nome do Produto"></p>
+<p>Preço: <input [(ngModel)]="preco" placeholder="Digite o Preço"></p>
+<p>Quantidade: <button (click)="adicionarQtd()">[+]</button><button (click)="removerQtd()" [disabled]="!botaoRemover">[-]</button></p>
+
+<p>Produto: {{ nome }}</p>
+<p>Preço: {{ preco | currency : 'BRL' }}</p>
+<p>Quantidade: {{ quantidade }}</p>
+<p>Total: {{ preco * quantidade | currency : 'BRL' }}</p>
+
+<button (click)="adicionarAoCarrinho()">[Adicionar ao Carrinho]</button>
+<p>----------------------------------------</p>
+@if (exibirTexto) {
+  <p>Produto: {{ nome }}</p>
+    <p>Preço: {{ preco | currency : 'BRL' }}</p>
+    <p>Quantidade: {{ quantidade }}</p>
+    <p>Total: {{ preco * quantidade | currency : 'BRL' }}</p>
+}
