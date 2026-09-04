@@ -1,0 +1,4 @@
+<p>Quantidade: {{ quantidade }}</p>
+<button (click)="adicionarQtd()">[+]</button>
+<button (click)="removerQtd()" [disabled]="!botaoRemover">[-]</button>
+<p>{{ mensagemErro }}</p>

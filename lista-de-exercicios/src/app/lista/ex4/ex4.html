@@ -1,0 +1,3 @@
+<input [(ngModel)]="nome" (input)="verificarFormulario()" placeholder="Digite seu nome">
+<button (click)="formularioSalvo()" [disabled]="!formularioValido">Salvar</button>
+<p>{{ mensagem }}</p>
