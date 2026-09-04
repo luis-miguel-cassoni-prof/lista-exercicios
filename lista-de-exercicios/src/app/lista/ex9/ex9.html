@@ -1,3 +1,6 @@
+<p>Produto: <input [(ngModel)]="nome" placeholder="Digite seu nome"></p>
+
+<p>Nome do Produto: {{ nome }}</p>
 <p>Quantidade: {{ quantidade }}</p>
 <button (click)="adicionarQtd()">[+]</button>
 <button (click)="removerQtd()" [disabled]="!botaoRemover">[-]</button>
