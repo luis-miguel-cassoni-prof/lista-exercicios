@@ -1,2 +1,4 @@
-<p>Usuário: <input [(ngModel)]="usuario" placeholder="Digite o nome do Usuário"></p>
-<p>Senha: <input [(ngModel)]="senha" placeholder="Digite o nome do Senha"></p>
+<p>Usuário: <input [(ngModel)]="usuario" (input)="verificarEntrada()" placeholder="Digite o nome do Usuário"></p>
+<p>Senha: <input [(ngModel)]="senha" (input)="verificarEntrada()" placeholder="Digite o nome do Senha"></p>
+<button (click)="botaoLogin()" [disabled]="!validarAut">Entrar</button>
+<p>{{ loginRealizado }}</p>

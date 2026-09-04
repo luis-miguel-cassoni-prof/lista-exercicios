@@ -10,12 +10,15 @@ export class Ex10 {
   usuario = '';
   senha = '';
   validarAut = false;
-}
-
-validarAutenticacao() {
-  if(this.nome != null && this.senha != null) {
-    validarAut = true;
+  loginRealizado = '';
+  
+  verificarEntrada() {
+    if(this.usuario != '' && this.senha != '') {
+      this.validarAut = true;
+    }
   }
 
-  if(validarAut)
+  botaoLogin() {
+    this.loginRealizado = 'Autenticação realizada com sucesso, bem vindo ' + this.usuario + '!';
+  }
 }
