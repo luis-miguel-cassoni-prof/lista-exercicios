@@ -5,6 +5,10 @@ const routes: Routes = [
   {
     path: 'lista',
     loadChildren: () => import('./lista/lista-module').then(m => m.ListaModule)
+  },
+  {
+    path: 'lista2',
+    loadChildren: () => import('./lista2/lista2-module').then(m => m.Lista2Module)
   }
 ];
 

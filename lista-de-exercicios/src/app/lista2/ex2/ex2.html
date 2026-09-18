@@ -1,0 +1,10 @@
+<p><input [(ngModel)]="usuario" placeholder="Digite o nome do Usuário"></p>
+
+@if(usuarioLogado == false) {
+    <p><button (click)="efetuarLoginOuSair()">Entrar</button></p>
+    <p>Acesso inválido</p>
+} 
+@else {
+    <p><button (click)="efetuarLoginOuSair()">Sair</button></p>
+    <h1>Bem vindo! {{ usuario }}</h1>
+}
