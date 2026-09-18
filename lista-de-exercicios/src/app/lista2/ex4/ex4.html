@@ -1,0 +1,11 @@
+<p>Produto: <input [(ngModel)]="item" placeholder="Digite o nome do Produto"></p>
+<p><button (click)="salvarItem()">Salvar Produto</button></p>
+
+@if(itemSalvo != '') {
+    <p>Produto: {{ itemSalvo }}</p>
+    <p>Estoque: {{ estoque }}</p>
+    <p><button (click)="addUnidade()">+</button></p>
+}
+@if(estoque > 0) {
+    <p><button (click)="removerUnidade()">-</button></p>
+}

@@ -1,0 +1,13 @@
+@for(nome of nomes; track $index) {
+    @if($first) {
+        <p>Primeiro: {{ $index + 1 }}. {{ nome }}</p>
+    } @else if($last) {
+        <p>Último: {{ $index + 1 }}. {{ nome }}</p>
+    } @else {
+        <p>{{ $index + 1 }}. {{ nome }}</p>
+    }
+}
+
+@empty {
+        <p>Ninguém está nessa lista</p>
+}

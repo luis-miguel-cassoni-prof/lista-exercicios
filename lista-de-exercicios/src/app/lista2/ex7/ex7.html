@@ -1,0 +1,11 @@
+@for(disciplina of disciplinas; track $index) {
+    @if($index % 2 == 0) {
+        <p [ngStyle]="{'color': disciplina ? 'red' : 'red'}">
+            {{disciplina}}
+        </p>
+    } @else {
+        <p [ngStyle]="{'color': disciplina ? 'blue' : 'blue'}">
+            {{disciplina}}
+        </p>
+    }
+}
