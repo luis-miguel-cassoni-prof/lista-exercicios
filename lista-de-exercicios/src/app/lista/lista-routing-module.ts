@@ -12,6 +12,7 @@ import { Ex9 } from './ex9/ex9'
 import { Ex10 } from './ex10/ex10'
 import { Ex11 } from './ex11/ex11'
 import { CampoTexto } from './campo-texto/campo-texto'
+import { Pai } from './pai/pai'
 
 const routes: Routes = [
   {
@@ -49,6 +50,9 @@ const routes: Routes = [
   },
   {
     path: 'campo-texto', component: CampoTexto
+  },
+  {
+    path: 'pai', component: Pai
   }
 ];
 
