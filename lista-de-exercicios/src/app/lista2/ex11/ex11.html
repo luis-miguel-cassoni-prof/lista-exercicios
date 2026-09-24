@@ -1,1 +1,17 @@
-<p>ex11 works!</p>
+@for(produto of produtos; track $index) {
+    @if($index == 0) {
+        <button (click)="mostrarSemQtd()">Alterar</button>
+    }
+    
+    @if(mostrar == true) {
+        <p>Índice: {{$index}}, ID: {{produto.id}}, Nome: {{produto.nome}}, Preço: {{produto.preco | currency : 'BRL'}}, Quantidade:
+        {{produto.quantidade}}</p>
+    } @else {
+        @if(produto.quantidade == 0) {
+            
+        } @else {
+            <p>Índice: {{$index}}, ID: {{produto.id}}, Nome: {{produto.nome}}, Preço: {{produto.preco | currency : 'BRL'}}, Quantidade:
+            {{produto.quantidade}}</p>
+        }
+    }
+}
