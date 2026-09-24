@@ -1,0 +1,6 @@
+@for(produto of produtos; track $index) {
+    <p>Índice: {{$index}}, ID: {{produto.id}}, Nome: {{produto.nome}}, Preço: {{produto.preco | currency : 'BRL'}}, Quantidade: 
+        {{produto.quantidade}}
+    </p>
+    <strong>TOTAL EM ESTOQUE: {{produto.quantidade * produto.preco | currency : 'BRL'}}</strong>
+}

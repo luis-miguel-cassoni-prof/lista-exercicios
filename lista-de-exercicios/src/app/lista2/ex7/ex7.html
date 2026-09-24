@@ -1,11 +1,17 @@
-@for(disciplina of disciplinas; track $index) {
-    @if($index % 2 == 0) {
-        <p [ngStyle]="{'color': disciplina ? 'red' : 'red'}">
-            {{disciplina}}
-        </p>
-    } @else {
-        <p [ngStyle]="{'color': disciplina ? 'blue' : 'blue'}">
-            {{disciplina}}
-        </p>
-    }
+@for (disciplina of disciplinas; track $index; let i = $index) {
+
+  <p
+    [ngClass]="{
+      'par': i % 2 === 0,
+      'impar': i % 2 !== 0,
+      'primeira': i === 0,
+      'ultima': i === disciplinas.length - 1
+    }"
+    [style.background-color]="i % 2 === 0 ? 'lightblue' : 'lightgray'"
+    [style.font-weight]="i === 0 ? 'bold' : 'normal'"
+    [style.border]="i === disciplinas.length - 1 ? '3px dashed red' : 'none'"
+  >
+    {{ disciplina }}
+  </p>
+
 }
