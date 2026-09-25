@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-filho',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './filho.scss',
 })
 export class Filho {
+  @Input()
   topo: string = "Loja Angular 2"
 }

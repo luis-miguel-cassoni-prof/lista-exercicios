@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './pai.html',
   styleUrl: './pai.scss',
 })
-export class Pai {}
+export class Pai {
+  loja: string = "Loja Angular Pai"
+}
