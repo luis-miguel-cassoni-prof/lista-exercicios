@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './filho.html',
   styleUrl: './filho.scss',
 })
-export class Filho {}
+export class Filho {
+  topo: string = "Loja Angular 2"
+}
